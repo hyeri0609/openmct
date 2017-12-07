@@ -49,6 +49,10 @@ define(
                 } else {
                     this.deselect();
                 }
+
+                if (selection[0].context.proxy) {
+                    this.proxy(selection[0].context.proxy);
+                }    
             }.bind(this));
         }
 

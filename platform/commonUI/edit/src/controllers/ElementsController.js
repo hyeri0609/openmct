@@ -78,7 +78,8 @@ define(
                 return;
             }
 
-            var selectedObjectComposition = selection[0].context.oldItem.useCapability('composition');
+            var selectedObjectComposition = selection[0].context.oldItem &&
+                selection[0].context.oldItem.useCapability('composition');
 
             if (selectedObjectComposition) {
                 selectedObjectComposition.then(function (composition) {
